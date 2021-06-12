@@ -1,0 +1,55 @@
+/*
+#1c2340: azul
+#50223C: rojo
+#F0DAC5: piel
+*/
+
+body {
+    background-color: #eee;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1C2340;
+}
+
+li {
+    float: left;
+    cursor: pointer;
+}
+
+.logout-icon {
+    float: right;
+}
+
+li:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+li span {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+li span:hover {
+    color: white;
+}
+
+.active {
+    background-color: #50223C;
+}
+
+.active:hover {
+    background-color: rgba(80,34,51,0.9);
+}
+
