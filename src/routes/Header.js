@@ -1,22 +1,12 @@
 // HEADER
 import "../css/Header.css";
-import {Navbar, Nav} from "react-bootstrap";
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 //link generales
 import Home from "./Home";
 
 import {useSelector} from "react-redux";
-
-import {
-    //principal componente de enrutamiento
-    BrowserRouter as Router,
-    //switch es el que renderiza el componente que corresponde a la ruta que indiquemos
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-
 
 // BODY
 
@@ -24,27 +14,50 @@ function Header(props){
     /*const userType = useSelector((store) => store.authReducer.userType);    //tipo de usuario*/
 
     return(
-        <Router>
-            <div>
-                {/*Alumno*/}
+        <div>
+            {/*Alumno*/}
+            { /*usertype == 1 &&*/
                 <ul>
-                    <li class="active" as={Link} to="/"><span><HomeRoundedIcon/></span></li>
-                    <li as={Link} to="/google"><span>Perfil</span></li>
-                    <li class="logout-icon"><span><ExitToAppIcon/></span></li>
+                    <li className="active"><a href="./Home"><HomeRoundedIcon/></a></li>
+                    <li><a href="./Home"><AccountCircleIcon/></a></li>
+                    <li className="logout-icon"><a href="./Home"><ExitToAppIcon/></a></li>
                 </ul>
-                {/* SWITCH */}
-                <Switch>
-                    {/* Routes Default */}
-                    <Route path="/google">
-                        <Home/>
-                    </Route>
-                    {/* Routes Default */}
-                    <Route path="/">
-                        <Home/>
-                    </Route>
-                </Switch>
-            </div>
-        </Router>
+            }
+            {/*Profesor*/}
+            { /*usertype == 2 &&
+                <ul>
+                    <li className="active"><a href="./Home"><HomeRoundedIcon/></a></li>
+                    <li><a href="./Home">Perfil</a></li>
+                    <li as={Link} to="/google"><span>Grupos</span></li>
+                    <li className="logout-icon"><span><ExitToAppIcon/></span></li>
+                </ul>
+            */}
+            {/*Funcionario FabLab*/}
+            { /*usertype == 3 &&
+                <ul>
+                    <li className="active"><a href="./Home"><HomeRoundedIcon/></a></li>
+                    <li><a href="./Home">Perfil</a></li>
+                    <li><a href="./Home">Modificar rol</a></li>
+                    <li className="logout-icon"><a href="./Home"><ExitToAppIcon/></a></li>
+                </ul>
+            */}
+            {/*Direccion*/}
+            { /*usertype == 4 &&
+                <ul>
+                    <li className="active"><a href="./Home"><HomeRoundedIcon/></a></li>
+                    <li><a href="./Home">Perfil</a></li>
+                    <li className="logout-icon"><a href="./Home"><ExitToAppIcon/></a></li>
+                </ul>
+            */}
+            {/*Externo*/}
+            { /*usertype == 4 &&
+                <ul>
+                    <li className="active"><a href="./Home"><HomeRoundedIcon/></a></li>
+                    <li><a href="./Home">Perfil</a></li>
+                    <li className="logout-icon"><a href="./Home"><ExitToAppIcon/></a></li>
+                </ul>
+            */}
+        </div>
     );
 } 
 

@@ -33,7 +33,7 @@ li:hover {
     background-color: rgba(0,0,0,0.3);
 }
 
-li span {
+li a {
     display: block;
     color: white;
     text-align: center;
@@ -41,7 +41,7 @@ li span {
     text-decoration: none;
 }
 
-li span:hover {
+li a:hover {
     color: white;
 }
 
@@ -52,4 +52,3 @@ li span:hover {
 .active:hover {
     background-color: rgba(80,34,51,0.9);
 }
-

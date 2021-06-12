@@ -1,8 +1,10 @@
 import "../css/Home.css";
+import {useSelector} from "react-redux";
 
 function Home(props){
+    console.log("hola");
     return(
-        <div class="content">
+        <div className="content">
             <p>Contenido Home</p>
         </div>
     );
