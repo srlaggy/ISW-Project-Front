@@ -1,0 +1,62 @@
+/* 
+Colores:
+rojo vino:   #50223C
+azul marino: #1C2340
+beige:       #F0DAC5
+
+Colores planilla:
+rosa: #FFD5D6
+rojo: #FE8282
+*/
+
+body{
+    padding: 0;
+    margin: 0;
+    background: #FFD5D6;
+}
+
+h1{
+    font-size: 25px;
+    text-align: center;
+}
+
+.loginBox{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-sizing: border-box;
+    width: 50%;
+    min-width: 750px;
+    height: 60%;
+    min-height: 450px;
+    color: #545454;
+}
+
+.loginLeft{
+    box-sizing: border-box;
+    width: 60%;
+    min-width: 450px;
+    background: #FE8282;
+    border-radius: 15px 0 0 15px;
+}
+
+.loginRight{
+    box-sizing: border-box;
+    width: 40%;
+    min-width: 300px;
+    background: white;
+    border-radius: 0 15px 15px 0;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm{
+    height: 50%;
+    width: 100%;
+    border: 1px solid black;
+}
